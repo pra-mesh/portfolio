@@ -209,7 +209,7 @@ export const Terminal = () => {
         dark:from-blue-500 dark:to-purple-600 p-1 shadow-2xl"
         >
           <img
-            src="/profile.webp"
+            src={`${import.meta.env.BASE_URL}profile.webp`}
             alt={PERSONAL_INFO.name}
             className="w-full h-full rounded-full object-cover"
           />

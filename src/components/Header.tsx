@@ -23,9 +23,9 @@ const Header = () => {
     }
   };
   const handleDownloadResume = () => {
-
     const link = document.createElement("a");
     link.href = PERSONAL_INFO.resumeUrl;
+    console.log(PERSONAL_INFO.resumeUrl);
     link.download = "Resume_Pramesh_Pradhan.pdf";
     document.body.appendChild(link);
     link.click();
