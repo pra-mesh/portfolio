@@ -5,5 +5,5 @@ export const PERSONAL_INFO = {
   email: "pram.mesh.dhan@hotmail.com",
   phone: "+977 9841362926",
   location: "Banepa-13, Nepal",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Resume_Pramesh_Pradhan.pdf",
 };

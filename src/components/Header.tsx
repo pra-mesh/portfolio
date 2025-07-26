@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { PERSONAL_INFO } from "../constants/personalInfo";
 import { useTheme } from "../contexts/ThemeContext";
 import { Download, Menu, Moon, Sun, X } from "lucide-react";
@@ -22,7 +22,15 @@ const Header = () => {
       setIsMenuOpen(false);
     }
   };
-  const handleDownloadResume = () => {};
+  const handleDownloadResume = () => {
+
+    const link = document.createElement("a");
+    link.href = PERSONAL_INFO.resumeUrl;
+    link.download = "Resume_Pramesh_Pradhan.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 text-slate-700 dark:text-slate-200  ${
