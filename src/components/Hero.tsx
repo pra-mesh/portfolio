@@ -1,4 +1,11 @@
-import { Braces, Code2, GitBranch, Mail, MapPin } from "lucide-react";
+import {
+  Braces,
+  ChevronDown,
+  Code2,
+  GitBranch,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import { PERSONAL_INFO } from "../constants/personalInfo";
 import { socialLinks } from "../constants/socialLinks";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -16,7 +23,14 @@ const Hero = () => {
         return <Mail size={20} />;
     }
   };
+  const scrollToNextSection = () => {
+    const aboutSection = document.querySelector("#about");
 
+    if (aboutSection) {
+      console.log("h");
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       id="home"
@@ -27,7 +41,7 @@ const Hero = () => {
         <div className="absolute top-20 left-10 text-blue-400/20 font-mono text-sm animate-bounce">
           {'{ "framework": "React" }'}
         </div>
-        <div className="absolute top-40 right-20  text-green-950/20 dark:text-green-400/20 font-mono text-sm animate-pulse delay-1000">
+        <div className="absolute top-35 right-20  text-green-950/20 dark:text-green-400/20 font-mono text-sm animate-pulse delay-1000">
           {"app.MapControllers();"}
         </div>
         <div className="absolute bottom-40 left-20 text-yellow-950/20 dark:text-yellow-400/20 font-mono text-sm animate-pulse delay-2000">
@@ -136,6 +150,14 @@ const Hero = () => {
         {/* Right side - Terminal */}
         <Terminal />
       </div>
+      <button
+        onClick={scrollToNextSection}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60
+         hover:text-white transition-colors duration-300 animate-bounce"
+        aria-label="Scroll to next section"
+      >
+        <ChevronDown size={24} />
+      </button>
     </section>
   );
 };

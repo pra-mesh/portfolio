@@ -40,18 +40,18 @@ export const Terminal = () => {
   return (
     <div className="relative">
       <div
-        className="bg-white/10 dark:bg-gray-900/50 backdrop-blur-sm rounded-xl border
+        className=" bg-white/10 dark:bg-gray-900/50 backdrop-blur-sm rounded-xl border
        border-gray-400/20  dark:border-gray-700/50 shadow-2xl"
       >
-        {/* Termainal Header */}
-        <div className="flex items-center justify-between pl-4 pr-8 py-3 border-b border-slate-700/50">
+        {/* Terminal Header */}
+        <div className="flex mx-4 items-center justify-between pr-8 pt-3 pb-1 border-b border-slate-700/50">
           <div>
             {tabs.map((x) => (
               <button
                 key={x}
                 onClick={() => setActiveTerminal(x)}
                 type="button"
-                className={` pl-2 pr-5 text-slate-600 dark:text-slate-300 border-slate-700/50 ${
+                className={` pl-2 pr-5 py-2 text-slate-600 dark:text-slate-300 border-slate-700/50 ${
                   activeTerminal === x
                     ? "border-t border-x border-t-blue-600/80 shadow-2xl b"
                     : "border-b"
@@ -68,139 +68,147 @@ export const Terminal = () => {
           </div>
         </div>
         {/* Code Content */}
-        <div className="p-6 space-y-4">
-          {activeTerminal === "Program.cs" && (
-            <div className="font-mono text-sm space-y-2">
-              <div className="text-slate-500">
-                // Building the future, one line at a time
+        <div className=" flex flex-col h-100 justify-end">
+          <div className="p-6 h-75 flex-grow space-y-4">
+            {activeTerminal === "Program.cs" && (
+              <div className="font-mono text-sm space-y-2">
+                <div className="text-slate-500">
+                  // Building the future, one line at a time
+                </div>
+                <div className="text-blue-400">
+                  <span className="text-purple-400">public class </span>
+                  Developer
+                </div>
+                <div className="text-slate-500  dark:text-slate-300 ml-4">
+                  {"{"}
+                </div>
+                <div className="text-green-400 ml-8">
+                  <span className="text-purple-400">public string[]</span>
+                  Skills =
+                </div>
+                <div className="text-slate-500  dark:text-slate-300 ml-12">
+                  {'{ "C#", "React", "TypeScript", "SQL" };'}
+                </div>
+                <div className=" ml-4">{"}"}</div>
               </div>
-              <div className="text-blue-400">
-                <span className="text-purple-400">public class </span>
-                Developer
+            )}
+            {activeTerminal === "App.tsx" && (
+              <div className="font-mono text-sm space-y-2">
+                <div className="text-slate-500">//This a components</div>
+                <div className="text-purple-400">
+                  import <span className="text-yellow-400">{"{ "}</span>
+                  <span className="text-sky-300">useState</span>
+                  <span className="text-yellow-400">{" } "}</span>
+                  from
+                  <span className="text-orange-400/80">{' "react"'}</span>
+                  <br />
+                </div>
+                <div className="text-yellow-400">
+                  <span className="text-blue-400/90">const </span>
+                  <span className="text-yellow-300/90">Development </span>
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    =
+                  </span>
+                  ()
+                  <span className="text-sky-600/90">{" => "}</span>
+                  {"{"}
+                </div>
+                <div className="text-purple-400 ml-5">
+                  <span className="text-blue-400/90">const </span>
+                  {"["}
+                  <span className="text-blue-600/90">state </span>
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    ,
+                  </span>
+                  <span className="text-yellow-300/80">setState </span>
+                  {"] "}
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    =
+                  </span>
+                  {"<"}
+                  <span className="text-green-600/90">string </span>
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    |
+                  </span>
+                  <span className="text-green-600/90">null </span>
+                  {">"}(
+                  <span className="text-orange-400/80">
+                    {'"Hello from Js"'}
+                  </span>
+                  )
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    ;
+                  </span>
+                </div>
+                <div className="ml-5 text-purple-400">
+                  return
+                  <span className="text-blue-400/90"> {" <div>"} </span>
+                  {"{"} <span className="text-blue-600/90">state </span>
+                  {"}"}
+                  <span className="text-blue-400/90"> {" </div>"} </span>
+                </div>
+                <div className="text-purple-400">
+                  {"}"}
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    ;
+                  </span>
+                </div>
+                <div className="text-purple-400">
+                  export default
+                  <span className="text-yellow-300/90"> Development</span>
+                  <span className="text-slate-500  dark:text-slate-300 mr-2">
+                    ;
+                  </span>
+                </div>
               </div>
-              <div className="text-slate-500  dark:text-slate-300 ml-4">
-                {"{"}
+            )}
+            {activeTerminal === "script.sql" && (
+              <div className="text-blue-600/90">
+                <div>
+                  create procedure{" "}
+                  <span className="text-slate-500  dark:text-slate-300 ">
+                    myProc
+                  </span>
+                </div>
+                <div>as</div>
+                <div>begin</div>
+                <div>
+                  select * from{" "}
+                  <span className="text-slate-500  dark:text-slate-300">
+                    devStack
+                  </span>
+                </div>
+                <div>end</div>
               </div>
-              <div className="text-green-400 ml-8">
-                <span className="text-purple-400">public string[]</span>
-                Skills =
-              </div>
-              <div className="text-slate-500  dark:text-slate-300 ml-12">
-                {'{ "C#", "React", "TypeScript", "SQL" };'}
-              </div>
-              <div className=" ml-4">{"}"}</div>
+            )}
+          </div>
+          {/* Code Content Terminal */}
+          <div className="h-25">
+            <div className=" border-t mx-4 border-slate-700/50 pt-4 px-2 flex items-center space-x-2 text-green-500 dark:text-green-400 font-mono text-sm">
+              <span>$</span>
+              <span>{typedText}</span>
+              <span
+                className={`inline-block w-2 h-5  ${
+                  isTyping ? "bg-green-500 dark:bg-green-400 animate-pulse" : ""
+                }`}
+              ></span>
             </div>
-          )}
-          {activeTerminal === "App.tsx" && (
-            <div className="font-mono text-sm space-y-2">
-              <div className="text-slate-500">//This a components</div>
-              <div className="text-purple-400">
-                import <span className="text-yellow-400">{"{ "}</span>
-                <span className="text-sky-300">useState</span>
-                <span className="text-yellow-400">{" } "}</span>
-                from
-                <span className="text-orange-400/80">{' "react"'}</span>
-                <br />
-              </div>
-              <div className="text-yellow-400">
-                <span className="text-blue-400/90">const </span>
-                <span className="text-yellow-300/90">Development </span>
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  =
-                </span>
-                ()
-                <span className="text-sky-600/90">{" => "}</span>
-                {"{"}
-              </div>
-              <div className="text-purple-400 ml-5">
-                <span className="text-blue-400/90">const </span>
-                {"["}
-                <span className="text-blue-600/90">state </span>
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  ,
-                </span>
-                <span className="text-yellow-300/80">setState </span>
-                {"] "}
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  =
-                </span>
-                {"<"}
-                <span className="text-green-600/90">string </span>
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  |
-                </span>
-                <span className="text-green-600/90">null </span>
-                {">"}(
-                <span className="text-orange-400/80">{'"Hello from Js"'}</span>)
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  ;
-                </span>
-              </div>
-              <div className="ml-5 text-purple-400">
-                return
-                <span className="text-blue-400/90"> {" <div>"} </span>
-                {"{"} <span className="text-blue-600/90">state </span>
-                {"}"}
-                <span className="text-blue-400/90"> {" </div>"} </span>
-              </div>
-              <div className="text-purple-400">
-                {"}"}
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  ;
-                </span>
-              </div>
-              <div className="text-purple-400">
-                export default
-                <span className="text-yellow-300/90"> Development</span>
-                <span className="text-slate-500  dark:text-slate-300 mr-2">
-                  ;
-                </span>
-              </div>
-            </div>
-          )}
-          {activeTerminal === "script.sql" && (
-            <div className="text-blue-600/90">
-              <div>
-                create procedure{" "}
-                <span className="text-slate-500  dark:text-slate-300 ">
-                  myProc
-                </span>
-              </div>
-              <div>as</div>
-              <div>begin</div>
-              <div>
-                select * from{" "}
-                <span className="text-slate-500  dark:text-slate-300">
-                  devStack
-                </span>
-              </div>
-              <div>end</div>
-            </div>
-          )}
-        </div>
-        <div className="border-t border-slate-700/50 pt-4 px-2 flex items-center space-x-2 text-green-500 dark:text-green-400 font-mono text-sm">
-          <span>$</span>
-          <span>{typedText}</span>
-          <span
-            className={`inline-block w-2 h-5  ${
-              isTyping ? "bg-green-500 dark:bg-green-400 animate-pulse" : ""
-            }`}
-          ></span>
-        </div>
 
-        <div className="flex flex-wrap  gap-2 pt-4 pb-2 px-2">
-          <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-mono border border-blue-500/30">
-            .NET Core
-          </span>
-          <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-mono border border-cyan-500/30">
-            React
-          </span>
-          <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-mono border border-yellow-500/30">
-            TypeScript
-          </span>
-          <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-mono border border-green-500/30">
-            SQL Server
-          </span>
+            <div className="flex flex-wrap gap-1 sm:gap-2  pt-4 pb-2 px-2">
+              <span className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-mono border border-blue-500/30">
+                .NET Core
+              </span>
+              <span className="px-2 sm:px-3 py-1  bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-mono border border-cyan-500/30">
+                React
+              </span>
+              <span className="px-2 sm:px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-mono border border-yellow-500/30">
+                TypeScript
+              </span>
+              <span className=" px-2 sm:px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-mono border border-green-500/30">
+                SQL Server
+              </span>
+            </div>
+          </div>
         </div>
         {/* Floating Profile Image */}
         <div
