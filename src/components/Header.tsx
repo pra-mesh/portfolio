@@ -25,8 +25,7 @@ const Header = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = PERSONAL_INFO.resumeUrl;
-    console.log(PERSONAL_INFO.resumeUrl);
-    link.download = "Resume_Pramesh_Pradhan.pdf";
+    link.download = "Resume_prams_prada.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -47,15 +46,15 @@ const Header = () => {
       >
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold">{PERSONAL_INFO.name}</h1>
+            <h1 className=" font-bold">{PERSONAL_INFO.name}</h1>
           </div>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex text-2xl space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 type="button"
-                className={`text-sm font-medium transition-colors duration-300
+                className={`text-sm font-bold transition-colors duration-300
                    hover:bg-gradient-to-r hover:text-transparent bg-clip-text hover:from-lime-300 hover:to-green-600 ${
                      isScrolled ? "text-slate-800 dark:text-slate-100 " : ""
                    }`}
