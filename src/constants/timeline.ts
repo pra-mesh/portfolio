@@ -9,7 +9,7 @@ export const timeline = [
     description:
       "Provide technical support for in-house banking system. Started Learning C# and Sql Server.",
     icon: Briefcase,
-    color: "blue",
+    color: "bg-blue-500",
   },
   {
     year: "2019-2023",
@@ -17,7 +17,7 @@ export const timeline = [
     description:
       "Completed bachelors from ISMT college affiliated to University of Sunderland. Graduated with first class division.",
     icon: GraduationCap,
-    color: "emerald",
+    color: "bg-emerald-500",
   },
   {
     year: "2021-2022",
@@ -25,14 +25,14 @@ export const timeline = [
     description:
       "Got promoted as Junior developer working on enterprise-level monolithic desktop applications",
     icon: Code,
-    color: "indigo",
+    color: "bg-indigo-500",
   },
   {
     year: "2025-2025",
     title: "MERN Stack Certified",
     description: "Completed full Stack MERN course from Broadway Infosys",
     icon: PiCertificate,
-    color: "green",
+    color: "bg-green-500",
   },
   {
     year: "2023-Present",
@@ -40,6 +40,6 @@ export const timeline = [
     description:
       "Worked on various Asp .net core web api projects following multi layered architecture.",
     icon: Code2,
-    color: "orange",
+    color: "bg-orange-500",
   },
 ];

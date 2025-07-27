@@ -3,11 +3,12 @@ import { codeElements } from "./codeElementsAbout";
 import { timeline } from "../constants/timeline";
 import { GiJourney } from "react-icons/gi";
 import { achievements } from "../constants/achievements";
+import clsx from "clsx";
 
 const About = () => {
   return (
-    <section id="about" className="py-20  relative overflow-hidden">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="about" className="pt-15 pb-10  relative overflow-hidden">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-12 relative">
         <div
           className={`text-center mb-5 transform transition-all duration-1000 
           `}
@@ -22,16 +23,16 @@ const About = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20 text-slate-600 dark:text-slate-300">
           <div>
-            <div className="relative mr-25 lg:mr-0">
+            <div className="relative md:mr-25 lg:mr-0">
               {/* Main Code Terminal */}
               <div
                 className="bg-white/10 dark:bg-gray-900/50 backdrop-blur-sm rounded-xl border
         border-gray-400/20  dark:border-gray-700/50 shadow-2xl  overflow-hidden"
               >
                 {/* Terminal Header */}
-                <div className="mx-4 flex items-center justify-between  py-3 border-b border-slate-700/50">
+                <div className="mx-4 flex items-center justify-between  pt-3 border-b border-slate-700/50">
                   <div>
-                    <p className="pl-2 pr-5 text-xl  border-slate-700/50 border-t border-x border-t-blue-600/80 shadow-2xl b">
+                    <p className="pl-2 pr-5 text-xl pb-2 border-slate-700/50 border-t border-x border-t-blue-600/80 shadow-2xl b">
                       Overview
                     </p>
                   </div>
@@ -104,8 +105,8 @@ const About = () => {
               {codeElements.map((element, index) => (
                 <div
                   key={index}
-                  className={`absolute ${element.position} bg-white/90 backdrop-blur-sm 
-                rounded-lg p-3 shadow-lg border border-slate-200 flex items-center space-x-2 animate-pulse`}
+                  className={`absolute ${element.position} hidden md:flex bg-white/90 backdrop-blur-sm 
+                rounded-lg p-3 shadow-lg border border-slate-200  items-center space-x-2 animate-pulse`}
                   style={{ animationDelay: `${index * 0.5}s` }}
                 >
                   <div className="text-blue-600">{element.icon}</div>
@@ -115,20 +116,20 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-10 shadow-2xl rounded-2xl ">
+            <div className="mt-10  rounded-2xl ">
               <h3 className="text-2xl font-bold  mb-8 flex items-center">
                 <Trophy className="w-10 h-10  dark:bg-amber-50 mr-3 rounded-full border-1 border-amber-600 p-1 text-amber-600" />
                 Achievement
               </h3>
 
-              <div className="space-y-4 relative">
+              <div className="space-y-4 relative ">
                 {achievements.map((item, idx) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={idx}
                       className={`bg-white/10  dark:bg-gray-900/50 backdrop-blur-sm px-6 py-2 rounded-xl shadow-lg border
-                       border-white/50 group-hover:shadow-xl transition-all duration-300 `}
+                       border-white/50 group-hover:shadow-xl group cursor-pointer transform hover:scale-105 transition-all duration-300 `}
                     >
                       <p className="leading-relaxed">{item.details}</p>
                       <div className="absolute -top-2 -left-2">
@@ -159,8 +160,11 @@ const About = () => {
                     >
                       {/* Timeline Dot */}
                       <div
-                        className={`relative z-10 flex items-center justify-center w-12 h-12 
-                         bg-${item.color}-500 rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                        className={clsx(
+                          "relative z-10 flex items-center justify-center w-12 h-12",
+                          `${item.color}`,
+                          "rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300"
+                        )}
                       >
                         <Icon className="w-6 h-6 text-white" />
                       </div>
