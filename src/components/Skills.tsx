@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Skill } from "../types";
 import { SkillsData } from "../constants/SkillsData";
-import { User } from "lucide-react";
 
 const Skills = () => {
   const [filteredSkills, setFilteredSkills] = useState<Skill[]>(SkillsData);
