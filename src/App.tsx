@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Hero />
       <hr className="mx-10 text-gray-300/40 dark:text-gray-400/20 animate-pulse" />
       <About />
-
+      <hr className="mx-10 text-gray-300/40 dark:text-gray-400/20 animate-pulse" />
+      <Skills />
       <hr className="mx-10 text-gray-300/40 dark:text-gray-400/20 animate-pulse" />
       <Contact />
       <hr className="mx-10 text-gray-300/40 dark:text-gray-400/20 animate-pulse" />
