@@ -22,3 +22,9 @@ export interface Project {
   demo: string | null;
   type: string;
 }
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
