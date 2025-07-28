@@ -195,16 +195,16 @@ export const Terminal = () => {
             </div>
 
             <div className="flex flex-wrap gap-1 sm:gap-2  pt-4 pb-2 px-2">
-              <span className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-mono border border-blue-500/30">
+              <span className="px-1 sm:px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-mono border border-blue-500/30">
                 .NET Core
               </span>
-              <span className="px-2 sm:px-3 py-1  bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-mono border border-cyan-500/30">
+              <span className="px-1 sm:px-3 py-1  bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-mono border border-cyan-500/30">
                 React
               </span>
-              <span className="px-2 sm:px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-mono border border-yellow-500/30">
+              <span className="px-1 sm:px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-mono border border-yellow-500/30">
                 TypeScript
               </span>
-              <span className=" px-2 sm:px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-mono border border-green-500/30">
+              <span className=" px-1 sm:px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-mono border border-green-500/30">
                 SQL Server
               </span>
             </div>

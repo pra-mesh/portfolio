@@ -49,20 +49,21 @@ const Skills = () => {
                 focus:ring-violet-400 focus:border-violet-400 transition-all duration-300"
               />
             </div>
+
             {Object.entries(groupedSkills).map(([category, group]) => (
               <div key={category} className="text-start ">
-                <h3 className="text-2xl font-bold  mb-8 flex items-center">
+                <h3 className="text-2xl font-bold  mb-4 flex items-center">
                   {category}
                 </h3>
                 <div className="flex flex-wrap items-center justify-start w-full gap-4">
                   {group.map(({ name, icon: Icon, color }, index) => (
                     <div
                       key={`${name}-${index}`}
-                      className="flex flex-col w-36 h-36 bg-white/10  dark:bg-gray-900/50 backdrop-blur-sm px-6 py-2 rounded-xl shadow-lg border
+                      className="flex flex-col w-28 h-28 bg-white/10  dark:bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg border
                        border-white/50 group-hover:shadow-xl group cursor-pointer justify-center transform hover:scale-105 items-center transition-all duration-300 "
                     >
-                      <Icon size={48} style={{ color }} />
-                      <span>{name}</span>
+                      <Icon size={42} className="mb-2" style={{ color }} />
+                      <span className="text-sm">{name}</span>
                     </div>
                   ))}
                 </div>
