@@ -31,8 +31,12 @@ jobs:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    # ✅ Inject secret as env var
+    # if uses as variable VITE_EMAILJS_SERVICE_ID: ${{ vars.VITE_EMAILJS_SERVICE_ID }}
     env:
-      VITE_API_URL: ${{ secrets.VITE_API_URL }} # ✅ Inject secret as env var
+      VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+      VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+      VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
