@@ -11,3 +11,14 @@ export interface Skill {
     | "Testing & Quality"
     | "Development Tools";
 }
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  longDescription: string;
+  tech: string[];
+  image: string;
+  github: string | null;
+  demo: string | null;
+  type: string;
+}
