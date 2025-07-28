@@ -27,7 +27,7 @@ const Hero = () => {
     const aboutSection = document.querySelector("#about");
 
     if (aboutSection) {
-      console.log("h");
+     
       aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };

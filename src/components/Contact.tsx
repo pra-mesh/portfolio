@@ -52,7 +52,6 @@ const Contact = () => {
       message: formData.message,
     };
     try {
-      console.log("Form submitted", formData);
       await emailjs.send(
         EmailJsKey.ServiceID,
         EmailJsKey.TemplateID,
@@ -61,7 +60,7 @@ const Contact = () => {
       );
       setSubmitStatus("success");
     } catch (error) {
-      console.log({ error });
+      console.error({ error });
       setSubmitStatus("error");
     }
   };
