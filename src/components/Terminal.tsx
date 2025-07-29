@@ -89,7 +89,9 @@ export const Terminal = () => {
                 <div className="text-slate-500  dark:text-slate-300 ml-12">
                   {'{ "C#", "React", "TypeScript", "SQL" };'}
                 </div>
-                <div className=" ml-4">{"}"}</div>
+                <div className=" ml-4 text-slate-500  dark:text-slate-300">
+                  {"}"}
+                </div>
               </div>
             )}
             {activeTerminal === "App.tsx" && (
