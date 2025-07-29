@@ -51,16 +51,14 @@ const Skills = () => {
             </div>
 
             {Object.entries(groupedSkills).map(([category, group]) => (
-              <div key={category} className="text-start ">
-                <h3 className="text-2xl font-bold  mb-4 flex items-center">
-                  {category}
-                </h3>
-                <div className="flex flex-wrap items-center justify-start w-full gap-4">
+              <div key={category} className="text-start flex flex-col  ">
+                <h3 className="text-2xl font-bold  mb-4 ">{category}</h3>
+                <div className="flex flex-wrap items-center justify-center sm:justify-start w-full gap-4">
                   {group.map(({ name, icon: Icon, color }, index) => (
                     <div
                       key={`${name}-${index}`}
-                      className="flex flex-col w-28 h-28 bg-white/10  dark:bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg border
-                       border-white/50 group-hover:shadow-xl group cursor-pointer justify-center transform hover:scale-105 items-center transition-all duration-300 "
+                      className="flex flex-col w-24 h-24 sm:w-28 sm:h-28 bg-white/10  dark:bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg border
+                       border-white/50 group-hover:shadow-xl group cursor-pointer justify-center  transform hover:scale-105 items-center transition-all duration-300 "
                     >
                       <Icon size={42} className="mb-2" style={{ color }} />
                       <span className="text-sm">{name}</span>

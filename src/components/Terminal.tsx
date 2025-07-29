@@ -214,7 +214,7 @@ export const Terminal = () => {
         </div>
         {/* Floating Profile Image */}
         <div
-          className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-gradient-to-br
+          className="absolute -top-14 -right-2 sm:-top-8 sm:-right-8 w-24 h-24 rounded-full bg-gradient-to-br
         from-blue-500/70 to-purple-600/70 border
         dark:from-blue-500 dark:to-purple-600 p-1 shadow-2xl"
         >

@@ -10,7 +10,7 @@ function App() {
   return (
     <div
       className="min-h-screen min-w-sm bg-gradient-to-br from-lime-50  via-indigo-50 to-lime-100  pb-3
-    dark:from-teal-900 dark:via-indigo-900 dark:to-teal-900 transition-colors duration-200"
+    dark:from-teal-900 dark:via-indigo-900 dark:to-teal-900 transition-colors duration-200 text-justify" 
     >
       <Header />
       <Hero />

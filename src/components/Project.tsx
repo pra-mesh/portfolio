@@ -19,7 +19,7 @@ const Project = () => {
             Projects
           </h2>
           <div className="w-36 h-1 bg-gradient-to-r via-indigo-500 to-teal-600 mx-auto rounded-full animate-ping"></div>
-         
+
           <div className="text-start mt-2 mb-6">
             <div className="inline-flex  px-4 py-2 bg-gradient-to-r from-violet-100 to-indigo-100 text-violet-700 text-sm font-semibold rounded-full">
               <Zap size={16} className="mr-2" />
@@ -119,7 +119,7 @@ const Project = () => {
                   <div className="flex space-x-4 pt-4">
                     <a
                       href={project.github ?? "#projects"}
-                      className="group inline-flex items-center px-6 py-3 bg-gray-300 dark:bg-gray-900
+                      className="group inline-flex items-center px-4 sm:px-6 py-3 bg-gray-300 dark:bg-gray-900
                       rounded-full font-semibold hover:bg-gray-200 dark:hover:bg-gray-800  transform hover:scale-105 transition-all duration-300"
                     >
                       <SiGithub size={20} className="mr-2" />
@@ -131,7 +131,7 @@ const Project = () => {
                     </a>
                     <a
                       href={project.demo ?? "#projects"}
-                      className="group inline-flex items-center px-6 py-3 border-2
+                      className="group inline-flex items-center px-4 sm:px-6  py-3 border-2 
                        border-violet-600  dark:bg-violet-500/50 rounded-full font-semibold hover:bg-violet-600/50 
                         transform hover:scale-105 transition-all duration-300"
                     >
