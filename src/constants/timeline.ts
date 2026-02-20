@@ -1,18 +1,16 @@
 import { Briefcase, Code, Code2, GraduationCap } from "lucide-react";
 
-import { PiCertificate } from "react-icons/pi";
-
 export const timeline = [
   {
-    year: "2018-2020",
+    year: "June 2018 to July 2020",
     title: "Technical Support (Oxpan Microsys)",
     description:
-      "Provide technical support for in-house banking system. Started Learning C# and Sql Server.",
+      "Provide technical support for in-house banking system.",
     icon: Briefcase,
     color: "bg-blue-500",
   },
   {
-    year: "2019-2023",
+    year: "October 2019 to  2023",
     title: "BSc (Hons) Computer system Engineering ",
     description:
       "Completed bachelors from ISMT college affiliated to University of Sunderland. Graduated with first class division.",
@@ -28,18 +26,19 @@ export const timeline = [
     color: "bg-indigo-500",
   },
   {
-    year: "2025-2025",
-    title: "MERN Stack Certified",
-    description: "Completed full Stack MERN course from Broadway Infosys",
-    icon: PiCertificate,
-    color: "bg-green-500",
-  },
-  {
-    year: "2023-Present",
-    title: "Mid-Level Back-end Engineer (Oxpan Microsys)",
+    year: "January 2023 - August 2025",
+    title: "Dot Net Data Engineer (Oxpan Microsys)",
     description:
       "Worked on various Asp .net core web api projects following multi layered architecture.",
     icon: Code2,
     color: "bg-orange-500",
+  },
+  {
+    year: "September 2025 - Present",
+    title: "SoftWare Engineer II (Teksewa Pvt Ltd) ",
+    description:
+      "Worked as fullstack developer for SaaS bidding and construction resource management system for US based Client.",
+    icon: Code,
+    color: "bg-red-500",
   },
 ];

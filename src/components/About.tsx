@@ -87,7 +87,7 @@ const About = () => {
                       </div>
                       <div className="text-center">
                         <div className="text-2xl font-bold text-indigo-600">
-                          4+
+                          5+
                         </div>
                         <div className="text-sm ">Years Exp</div>
                       </div>
@@ -178,7 +178,7 @@ const About = () => {
                               {item.title}
                             </h4>
                             <span
-                              className={`px-3 py-1  text-sm font-semibold rounded-full`}
+                              className={`px-3 py-1  text-xs font-semibold rounded-full`}
                             >
                               {item.year}
                             </span>
